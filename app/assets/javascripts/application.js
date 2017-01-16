@@ -14,5 +14,29 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
-//= require materialize-sprockets
-//= require materialize/extras/nouislider
+
+
+
+console.log("APP ONLINE");
+
+$(document).ready(function(){
+    
+	$('.overlay-open').on("click", openNav);
+	$('.closebtn').on("click", closeNav);
+
+}); //document-ready 
+
+/* Open when someone clicks on the span element */
+	function openNav() {
+		console.log("opening nav");
+	    document.getElementById("myNav").style.height = "100%";
+	}
+
+	/* Close when someone clicks on the "x" symbol inside the overlay */
+	function closeNav() {
+		console.log("closing nav");
+	    document.getElementById("myNav").style.height = "0%";
+	}
+
+
+

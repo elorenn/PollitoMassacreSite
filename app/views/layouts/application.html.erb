@@ -22,8 +22,33 @@
   	<div class="navbar-fixed main-nav">
       <nav>
         <div class="nav-wrapper">
-          
-            
+ 
+
+
+<!-- The overlay -->
+<div id="myNav" class="overlay">
+
+  <!-- Button to close the overlay navigation -->
+  <a href="javascript:void(0)" class="closebtn"> 
+    <img id="closing-x" alt="X" class="responsive-img" src="assets/x.png">
+  </a> 
+  <!-- The reason you’d want to do this with the href of a link is that normally, a javascript: URL will redirect the browser to a plain text version of the result of evaluating that JavaScript. But if the result is undefined, then the browser stays on the same page. void(0) is just the smallest script possible that evaluates as undefined. -->
+
+  <!-- Overlay content -->
+  <div class="overlay-content">
+    <a href="#">About</a>
+    <a href="#">Services</a>
+    <a href="#">Clients</a>
+    <a href="#">Contact</a>
+  </div>
+
+</div>
+
+<!-- Use any element to open/show the overlay navigation menu -->
+<span class="overlay-open">open</span>
+
+
+           
         </div> <!-- nav-wrapper -->
       </nav>
     </div> <!-- navbar-fixed main-nav -->
@@ -31,8 +56,8 @@
 	<div class="section scrollspy" id="top-section"> 
     	<div class="hero">
 
-        <img id="title-pollito" class="responsive-img" src="assets/pollito_text.png">
-        <img id="title-massacre" class="responsive-img" src="assets/massacre_text.png">
+        <img id="title-pollito" alt="the word pollito in yellow 8-bit font" class="responsive-img" src="assets/pollito_text.png">
+        <img id="title-massacre" alt="the word pollito in yellow 8-bit font" class="responsive-img" src="assets/massacre_text.png">
 
     	</div> <!-- hero -->
     </div> <!-- top-section -->
@@ -65,17 +90,6 @@
             </div>
           </div>
         </footer>
-
-
-
-    <!-- <footer class="page-footer"> -->
-            <!-- <div class="footer-copyright"> -->
-            <!-- <div class="container"> -->
-            
-            <!-- <p class="center"> <i> No </i> &#128035; &#128037; &#128037;<i>  were hurt in the making of this game.</i> </p> -->
-            <!-- </div> -->
-          <!-- </div>       -->
-    <!-- </footer> -->
 
   </body>
 </html>
