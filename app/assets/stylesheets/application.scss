@@ -5,6 +5,17 @@ $secondary-color: color("yellow", "base") !default;
 @import "materialize/extras/nouislider";
 
 
+/// ***  blues (sky): #5161fb, #368df9, #4a98f9;
+/// ***  blues (overalls): #223bec; #0a26ea;
+/// ***  blues (mountain): #4bd652, #01084e, #05336f
+/// ***  yellows: #fdee39, #ffff00, #ffff7a, 
+/// ***  reds: #ec301a, #fb4024, #fc583b
+/// ***  greens: #128d19, #1fcc27, #4bd652
+/// ***  browns: #6d3e0a, #94330e, #9c3108, #ae4720
+/// ***  beiges: #fdcd92, #fedcb3
+/// ***  orange: #fd962c 
+/// ***  greys: #282b2a, #808080
+
 /* Custom Stylesheet */
 /**
  * Use this file to override Materialize files so you can update
@@ -27,21 +38,20 @@ body {
 }
 
 #videogame {
-  // height: 80vh;
-  //width: 80vw;
-  // margin-left: 10vw;
-  // margin-right: 10vw; 
-  margin: auto;
+  margin-top: 20vh;
+  margin-bottom: 20vh;
 }
 
 footer.page-footer {
   margin: 0;
-  background-color: #5161fb;
- 
+  // background-color: #5161fb;
+  background: url("landclear.png");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 nav {
-  background-color: #5161fb;
+  background-color: transparent;
 }
 
 #gameframe {
