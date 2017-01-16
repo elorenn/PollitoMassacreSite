@@ -15,28 +15,39 @@
 //= require turbolinks
 //= require_tree .
 
-
+"use strict";
 
 console.log("APP ONLINE");
 
+
 $(document).ready(function(){
     
-	$('.overlay-open').on("click", openNav);
-	$('.closebtn').on("click", closeNav);
+	$('#opening-x').on("click", toggleOverlay);
+
+	$('#opening-x').on("click", function(e) {
+		console.log(e.target);
+		$('#opening-x').toggleClass("rotatef");
+		$('#opening-x').toggleClass("rotateb");
+	});
 
 }); //document-ready 
 
-/* Open when someone clicks on the span element */
-	function openNav() {
+
+function toggleOverlay(e) {
+
+	if ($(this).hasClass('menu-closed')) {
 		console.log("opening nav");
-	    document.getElementById("myNav").style.height = "100%";
+		document.getElementById("myNav").style.height = "100%";
 	}
 
-	/* Close when someone clicks on the "x" symbol inside the overlay */
-	function closeNav() {
+	if ($(this).hasClass('menu-opened')) {
 		console.log("closing nav");
-	    document.getElementById("myNav").style.height = "0%";
+		document.getElementById("myNav").style.height = "0%";
 	}
 
+	$('#opening-x').toggleClass("menu-closed");
+	$('#opening-x').toggleClass("menu-opened");
+
+}
 
 

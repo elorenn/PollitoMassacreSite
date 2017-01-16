@@ -104,7 +104,7 @@ div#frame-container {
     height: 0;
     width: 100%;
     position: fixed; /* Stay in place */
-    z-index: 999; /* Sit on top */
+    z-index: 1; /* Sit on top */
     left: 0;
     top: 0;
     background: url("grassyfield.png");
@@ -142,8 +142,7 @@ div#frame-container {
 .overlay .closebtn {
     position: absolute;
     top: 20px;
-    right: 45px;
-    font-size: 60px;
+    right: 20px;
 }
 
 /* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
@@ -156,13 +155,37 @@ div#frame-container {
     }
 }
 
-img#closing-x {
+img#opening-x {
+	position: absolute;
+    margin: auto;
+    padding: 15px 15px 5px 15px;
 	height: 50px;
+	-webkit-transition: -webkit-transform 1.2s ease-in-out;
+	transition:  transform 1.2s ease-in-out;
+	position: fixed;
+    z-index: 2;
+
 }
 
-.overlay img:hover, .overlay img:focus {
-	height: 60px; 
+// img#opening-x:hover, img#opening-x:focus {
+//   -moz-transform: scale(1.2);
+//   -webkit-transform: scale(1.2);
+//   transform: scale(1.2);
+// }
+
+.rotatef {
+  -webkit-transform: rotate(360deg);
+  transform: rotate(360deg);
 }
 
+.rotateb {
+  -webkit-transform: rotate(-360deg);
+  transform: rotate(-360deg);
+}
+
+#myNav {
+	 -webkit-transition-delay: .2s; /* Safari */
+    transition-delay: .2s;
+}
 
 
