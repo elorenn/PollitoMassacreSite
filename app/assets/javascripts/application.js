@@ -30,6 +30,7 @@ $(document).ready(function(){
 		$('#opening-x').toggleClass("rotateb");
 	});
 
+
 }); //document-ready 
 
 
@@ -38,16 +39,19 @@ function toggleOverlay(e) {
 	if ($(this).hasClass('menu-closed')) {
 		console.log("opening nav");
 		document.getElementById("myNav").style.height = "100%";
+		$("body").css("overflow","hidden");
 	}
 
 	if ($(this).hasClass('menu-opened')) {
 		console.log("closing nav");
 		document.getElementById("myNav").style.height = "0%";
+		$("body").css("overflow","auto");
 	}
 
 	$('#opening-x').toggleClass("menu-closed");
 	$('#opening-x').toggleClass("menu-opened");
 
 }
+
 
 

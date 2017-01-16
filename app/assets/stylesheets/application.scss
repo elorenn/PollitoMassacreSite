@@ -160,8 +160,8 @@ img#opening-x {
     margin: auto;
     padding: 15px 15px 5px 15px;
 	height: 50px;
-	-webkit-transition: -webkit-transform 1.2s ease-in-out;
-	transition:  transform 1.2s ease-in-out;
+	-webkit-transition: -webkit-transform .8s ease-in-out;
+	transition:  transform .8s ease-in-out;
 	position: fixed;
     z-index: 2;
 
@@ -184,8 +184,8 @@ img#opening-x {
 }
 
 #myNav {
-	 -webkit-transition-delay: .2s; /* Safari */
-    transition-delay: .2s;
+	 -webkit-transition-delay: .3s; /* Safari */
+    transition-delay: .3s;
 }
 
 
