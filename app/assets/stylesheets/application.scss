@@ -37,17 +37,21 @@ body {
   background-size: cover;
 }
 
-#videogame {
-  margin-top: 20vh;
-  margin-bottom: 20vh;
+div#videogame-section {
+  height: 100vh;
+  padding-top: 20vh;
 }
 
 footer.page-footer {
   margin: 0;
-  // background-color: #5161fb;
+  padding-top: 20vh;
   background: url("landclear.png");
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+footer.page-footer .footer-copyright {
+  background-color: rgba(0,0,0,.4);
 }
 
 nav {
@@ -58,15 +62,16 @@ nav {
   width: 485px;
   height: 402px;
   display: block;
-  margin: auto;
+  margin-top:-39px; 
+  margin-left:-2px;
 }
 
-// #flash {
-//   width: 485px;
-//   height: 402px; 
-//   display: block;
-//   margin: auto;
-// }
+div#frame-container {
+  margin: auto;
+  overflow: hidden; 
+  height: 360px; 
+  width: 480px;
+}
 
 
 // img#title-massacre {
