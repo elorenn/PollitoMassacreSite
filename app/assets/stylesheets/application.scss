@@ -105,7 +105,7 @@ nav {
 
 
 #top-section {
-  height: 75vh;
+  height: 80vh;
   padding: 0;
   background-color: rgba(0,0,0,0);
 }
@@ -140,8 +140,8 @@ footer.page-footer .footer-copyright {
 
 
 div#videogame-section {
-  height: 100vh;
-  padding-top: 20vh;
+  height: 70vh;
+  padding-top: 10vh;
 }
 
 
@@ -162,7 +162,7 @@ div#frame-container {
 }
 
 #text-section {
-	height: 90vh;
+	min-height: 70vh;
 	overflow: auto;
 	// padding-top: 65px;
 }
@@ -207,8 +207,12 @@ div#instructions-text-container, div#about-text-container, div#demo-text-contain
 	transition:  transform .5s ease-in-out;
 }
 
-#instructions-img, #about-img, #demo-img {
+#about-img, #demo-img {
 	padding-top: 5vw;
+	padding-bottom: 3px;
+}
+
+#instructions-img {
 	padding-bottom: 3px;
 }
 
@@ -344,8 +348,11 @@ img#title-pollito {
     z-index: 1; /* Sit on top */
     left: 0;
     top: 0;
-    background: url("grassyfield.png");
-    background-repeat: no-repeat;
+
+    background-color: #414FC9;
+    // background: url("grassyfield.png");
+    // background-repeat: no-repeat;
+
     overflow-x: hidden; /* Disable horizontal scroll */
     transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
 }
