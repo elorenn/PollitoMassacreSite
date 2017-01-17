@@ -57,15 +57,15 @@ function toggleOverlay(e) {
 }
 
 function toggleInstructions() {
-	$('#instructions-text-container').toggle();
+	$('#instructions-text-container').slideToggle();
 }
 
 function toggleAbout() {
-	$('#about-text-container').toggle();
+	$('#about-text-container').slideToggle();
 }
 
 function toggleDemo() {
-	$('#demo-text-container').toggle();
+	$('#demo-text-container').slideToggle();
 }
 
 
