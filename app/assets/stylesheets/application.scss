@@ -24,6 +24,18 @@ $secondary-color: color("yellow", "base") !default;
  * Made By MaterializeCSS.com
  */
 
+
+.rotatef {
+  -webkit-transform: rotate(360deg);
+  transform: rotate(360deg);
+}
+
+.rotateb {
+  -webkit-transform: rotate(0deg);
+  transform: rotate(0deg);
+}
+
+
 nav {
   background-color: transparent;
 }
@@ -94,8 +106,6 @@ div#frame-container {
 #text-section img {
 	cursor: hand;
 	cursor: pointer;
-	padding-bottom: 10px;
-	padding-top: 10px;
 }
 
 div.instructions-container {
@@ -121,10 +131,29 @@ div#instructions-text-container, div#about-text-container, div#demo-text-contain
 	height: 50vh ;
 	background-color: #414FC9;
 	margin-bottom: 10px;
-	margin-top: 10px;	
+	margin-top: 10px;
+}
+
+#instructions-x, #about-x, #demo-x {
+	display: block;
+	margin: auto;
+	width: 2vw;
+	padding-top: 0;
+	-webkit-transition: -webkit-transform .5s ease-in-out;
+	transition:  transform .5s ease-in-out;
+}
+
+#instructions-img, #about-img, #demo-img {
+	padding-top: 5vw;
+	padding-bottom: 3px;
 }
 
 
+// #instructions-img:hover, #instructions-img:focus, #about-img:hover, #about-img:focus, #demo-img:hover, #demo-img:focus {
+//   -moz-transform: scale(1.2);
+//   -webkit-transform: scale(1.2);
+//   transform: scale(1.2);
+// }
 
 
 // img#title-massacre {
@@ -212,7 +241,6 @@ img#opening-x {
 	transition:  transform .8s ease-in-out;
 	position: fixed;
     z-index: 2;
-
 }
 
 // img#opening-x:hover, img#opening-x:focus {
@@ -221,18 +249,9 @@ img#opening-x {
 //   transform: scale(1.2);
 // }
 
-.rotatef {
-  -webkit-transform: rotate(360deg);
-  transform: rotate(360deg);
-}
-
-.rotateb {
-  -webkit-transform: rotate(-360deg);
-  transform: rotate(-360deg);
-}
 
 #myNav {
-	 -webkit-transition-delay: .3s; /* Safari */
+	-webkit-transition-delay: .3s; /* Safari */
     transition-delay: .3s;
 }
 

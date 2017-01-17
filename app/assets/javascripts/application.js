@@ -30,9 +30,29 @@ $(document).ready(function(){
 		$('#opening-x').toggleClass("rotateb");
 	});
 
-	$('#instructions-img').on("click", toggleInstructions);
-	$('#about-img').on("click", toggleAbout);
-	$('#demo-img').on("click", toggleDemo);
+
+	$('.instructions-container').on("click", toggleInstructions);
+	$('.about-container').on("click", toggleAbout);
+	$('.demo-container').on("click", toggleDemo);
+
+	$('.demo-container').on("click", function(e) {
+		console.log(e.target);
+		$('#demo-x').toggleClass("rotatef");
+		$('#demo-x').toggleClass("rotateb");
+	});
+
+	$('.about-container').on("click", function(e) {
+		console.log(e.target);
+		$('#about-x').toggleClass("rotatef");
+		$('#about-x').toggleClass("rotateb");
+	});
+
+	$('.instructions-container').on("click", function(e) {
+		console.log(e.target);
+		$('#instructions-x').toggleClass("rotatef");
+		$('#instructions-x').toggleClass("rotateb");
+	});
+
 
 }); //document-ready 
 
@@ -57,15 +77,15 @@ function toggleOverlay(e) {
 }
 
 function toggleInstructions() {
-	$('#instructions-text-container').slideToggle();
+	$('#instructions-text-container').delay(100).slideToggle();
 }
 
 function toggleAbout() {
-	$('#about-text-container').slideToggle();
+	$('#about-text-container').delay(100).slideToggle();
 }
 
 function toggleDemo() {
-	$('#demo-text-container').slideToggle();
+	$('#demo-text-container').delay(100).slideToggle();
 }
 
 
