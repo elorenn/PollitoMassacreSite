@@ -22,31 +22,25 @@ console.log("APP ONLINE");
 
 $(document).ready(function(){
     
-	// $('#opening-contact').on("click", toggleOverlay);
-
-	// $('#opening-contact').on("click", function(e) {
-	// 	console.log(e.target);
-	// 	$('#opening-contact').toggleClass("rotatef");
-	// 	$('#opening-contact').toggleClass("rotateb");
-	// });
+	$('.scrollspy').scrollSpy();
 
 	$('#opening-contact').on("click", openOverlay);
 
 
 	$('#closing-x').on("click", closeOverlay);
 
-	$('#closing-x').on("click", function(e) {
-		console.log(e.target);
-		$('#closing-x').toggleClass("rotatef");
-		$('#closing-x').toggleClass("rotateb");
-	});
 
+
+    $('#instructions-nav').on("click", openInstructionsNav);
+	$('#about-nav').on("click", openAboutNav);
+	$('#demo-nav').on("click", openDemoNav);
 
 
 
 	$('.instructions-container').on("click", toggleInstructions);
 	$('.about-container').on("click", toggleAbout);
 	$('.demo-container').on("click", toggleDemo);
+
 
 	$('.demo-container').on("click", function(e) {
 		console.log(e.target);
@@ -70,29 +64,6 @@ $(document).ready(function(){
 }); //document-ready 
 
 
-
-
-// function toggleOverlay(e) {
-
-// 	if ($(this).hasClass('menu-closed')) {
-// 		console.log("opening nav");
-// 		document.getElementById("myNav").style.height = "100%";
-// 		$("body").css("overflow","hidden");
-// 		$('#opening-contact').attr("src", "/assets/x.png");
-// 	}
-
-// 	if ($(this).hasClass('menu-opened')) {
-// 		console.log("closing nav");
-// 		document.getElementById("myNav").style.height = "0%";
-// 		$("body").css("overflow","auto");
-// 		$('#opening-contact').attr("src", "/assets/contact.png");
-// 	}
-
-// 	$('#opening-contact').toggleClass("menu-closed");
-// 	$('#opening-contact').toggleClass("menu-opened");
-
-// }
-
 function closeOverlay(e) {
 
 	console.log("closing nav");
@@ -110,7 +81,6 @@ function openOverlay(e) {
 }
 
 
-
 function toggleInstructions() {
 	$('#instructions-text-container').delay(100).slideToggle();
 }
@@ -124,8 +94,50 @@ function toggleDemo() {
 }
 
 
+function openInstructionsNav() {
+	
+	console.log('#instructions-text-container');
 
+	if(!$('#instructions-text-container').is(':visible')) {
+		console.log("is hidden -weird");
+		$('#instructions-text-container').slideDown();
+		$('#about-text-container').slideUp();
+		$('#demo-text-container').slideUp();
 
+	} else if(!$('#instructions-text-container').is(':hidden'))  {
+		console.log("is visible -weird");
+
+	} else {
+		console.log("this doesn't work");
+	}
+
+}
+
+function openAboutNav() {
+	
+	console.log('#about-text-container');
+
+	if(!$('#about-text-container').is(':visible')) {
+		console.log("is hidden -weird");
+		$('#about-text-container').slideDown();
+		$('#instructions-text-container').slideUp();
+		$('#demo-text-container').slideUp();
+	} 
+
+}
+
+function openDemoNav() {
+	
+	console.log('#demo-text-container');
+
+	if(!$('#demo-text-container').is(':visible')) {
+		console.log("is hidden -weird");
+		$('#demo-text-container').slideDown();
+		$('#instructions-text-container').slideUp();
+		$('#about-text-container').slideUp();
+	} 
+
+}
 
 
 

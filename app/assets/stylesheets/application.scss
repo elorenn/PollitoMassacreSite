@@ -24,6 +24,21 @@ $secondary-color: color("yellow", "base") !default;
  * Made By MaterializeCSS.com
  */
 
+// ****************************************************************** 
+// ****************************************************************** 
+// ****************************************************************** 
+
+
+.centered {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+// ****************************************************************** 
+
 
 .rotatef {
   -webkit-transform: rotate(360deg);
@@ -41,7 +56,13 @@ $secondary-color: color("yellow", "base") !default;
 
 nav {
   background-color: transparent;
+  margin-bottom: 30px;
 }
+
+// .socialmedia a {
+// 	display: inline;
+// }
+
 
 .socialmedia {
 	position: absolute;
@@ -49,18 +70,37 @@ nav {
     left: 0px;
     margin: auto;
     padding: 15px 15px 5px 15px;
-	height: 50px;
+	// height: 20vw;
 	-webkit-transition: -webkit-transform .8s ease-in-out;
 	transition:  transform .8s ease-in-out;
-    // z-index: 2;
+    z-index: 2;
 }
 
 
 .socialmedia img {
 	cursor: hand;
 	cursor: pointer;
-	width: 33.34px;
+	width: 50px;
 	padding: 2px;
+}
+
+
+.table-of-contents {
+	position: absolute;
+	top: 0px;
+    right: 172.58px;
+    // margin: auto;
+    padding: 10px 0px 5px 15px;
+	// height: 50px;
+	-webkit-transition: -webkit-transform .8s ease-in-out;
+	transition:  transform .8s ease-in-out;
+}
+
+.table-of-contents img {
+	cursor: hand;
+	cursor: pointer;
+	height: 30px;
+	padding: 15px, 2px, 15px, 2px;
 }
 
 
@@ -124,6 +164,7 @@ div#frame-container {
 #text-section {
 	height: 90vh;
 	overflow: auto;
+	padding-top: 65px;
 }
 
 #text-section img {
@@ -188,20 +229,72 @@ div#instructions-text-container, div#about-text-container, div#demo-text-contain
   transform: scale(1.2);
 }
 
+// ****************************************************************** 
+
+.hero {
+	display: flex;
+   	justify-content: center;
+}
+
+
+
+@media screen and (min-width: 768px) {
+  
+	img#title-massacre {
+	  // margin: 10px;
+	  // width: 37vw;
+	  // margin-left: 10px; 
+	  // margin-top: 150px;
+	  // margin-bottom: 20vh;
+	}
+
+	img#title-pollito {
+	  // margin: 10px;
+	  // width: 32vw;
+	  // margin-right: 10px; 
+	  // margin-top: 150px;
+	  // margin-bottom: 20vh;
+	}
+
+	#title-whole {
+		// position: relative;
+		width: 50%;
+		// margin: auto;
+		// margin-top: 150px;
+		// margin-right: 10vw;
+		// margin-left: 10vw;
+	}  
+	
+
+} // => SMALL SCREEN => min-width: 768px
+
+
+
+
 // img#title-massacre {
-//   // margin-left: 10vw;
-//   // margin-right: 10vw; 
-//   margin-top: 20vh;
-//   margin-bottom: 20vh;
+//   margin: 10px;
+//   // width: 37vw;
+//   // margin-left: 10px; 
+//   // margin-top: 150px;
+//   // margin-bottom: 20vh;
 // }
 
 // img#title-pollito {
-//   // margin-left: 10vw;
-//   // margin-right: 10vw; 
-//   margin-top: 20vh;
-//   margin-bottom: 20vh;
+//   margin: 10px;
+//   // width: 32vw;
+//   // margin-right: 10px; 
+//   // margin-top: 150px;
+//   // margin-bottom: 20vh;
 // }
 
+// #title-whole {
+// 	position: relative;
+// 	width: 90vw;
+// 	// margin: auto;
+// 	margin-top: 150px;
+// 	margin-right: 10vw;
+// 	margin-left: 10vw;
+// }
 
 // ****************************************************************** 
 
@@ -266,7 +359,6 @@ img#opening-contact {
 	cursor: hand;
 	cursor: pointer;
 	position: absolute;
-	top: 0px;
     right: 0px;
     margin: auto;
     padding: 15px 15px 5px 15px;
@@ -278,29 +370,13 @@ img#opening-contact {
 }
 
 
-// img#closing-x {
-// 	cursor: hand;
-// 	cursor: pointer;
-// 	position: absolute;
-// 	top: 0px;
-//     right: 0px;
-//     margin: auto;
-//     padding: 15px 15px 5px 15px;
-// 	height: 50px;
-// 	// width: 0;
-// 	-webkit-transition: -webkit-transform .8s ease-in-out;
-// 	transition:  transform .8s ease-in-out;
-// 	position: fixed;
-//     z-index: 2;
-// }
-
-
 img#closing-x {
 	position: absolute;
     top: 20px;
-    right: 45px;
-    font-size: 60px;
+    right: 20px;
     height: 50px;
+    -webkit-transition: -webkit-transform .8s ease-in-out;
+	transition:  transform .8s ease-in-out;
 }
 
 
@@ -308,6 +384,12 @@ img#opening-contact:hover, img#opening-contact:focus {
   -moz-transform: scale(1.1);
   -webkit-transform: scale(1.1);
   transform: scale(1.1);
+}
+
+img#closing-x:hover, img#closing-x:focus {
+  -moz-transform: scale(1.2);
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2);
 }
 
 
