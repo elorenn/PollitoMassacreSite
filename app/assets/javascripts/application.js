@@ -22,13 +22,26 @@ console.log("APP ONLINE");
 
 $(document).ready(function(){
     
-	$('#opening-x').on("click", toggleOverlay);
+	// $('#opening-contact').on("click", toggleOverlay);
 
-	$('#opening-x').on("click", function(e) {
+	// $('#opening-contact').on("click", function(e) {
+	// 	console.log(e.target);
+	// 	$('#opening-contact').toggleClass("rotatef");
+	// 	$('#opening-contact').toggleClass("rotateb");
+	// });
+
+	$('#opening-contact').on("click", openOverlay);
+
+
+	$('#closing-x').on("click", closeOverlay);
+
+	$('#closing-x').on("click", function(e) {
 		console.log(e.target);
-		$('#opening-x').toggleClass("rotatef");
-		$('#opening-x').toggleClass("rotateb");
+		$('#closing-x').toggleClass("rotatef");
+		$('#closing-x').toggleClass("rotateb");
 	});
+
+
 
 
 	$('.instructions-container').on("click", toggleInstructions);
@@ -57,24 +70,46 @@ $(document).ready(function(){
 }); //document-ready 
 
 
-function toggleOverlay(e) {
 
-	if ($(this).hasClass('menu-closed')) {
-		console.log("opening nav");
-		document.getElementById("myNav").style.height = "100%";
-		$("body").css("overflow","hidden");
-	}
 
-	if ($(this).hasClass('menu-opened')) {
-		console.log("closing nav");
-		document.getElementById("myNav").style.height = "0%";
-		$("body").css("overflow","auto");
-	}
+// function toggleOverlay(e) {
 
-	$('#opening-x').toggleClass("menu-closed");
-	$('#opening-x').toggleClass("menu-opened");
+// 	if ($(this).hasClass('menu-closed')) {
+// 		console.log("opening nav");
+// 		document.getElementById("myNav").style.height = "100%";
+// 		$("body").css("overflow","hidden");
+// 		$('#opening-contact').attr("src", "/assets/x.png");
+// 	}
 
+// 	if ($(this).hasClass('menu-opened')) {
+// 		console.log("closing nav");
+// 		document.getElementById("myNav").style.height = "0%";
+// 		$("body").css("overflow","auto");
+// 		$('#opening-contact').attr("src", "/assets/contact.png");
+// 	}
+
+// 	$('#opening-contact').toggleClass("menu-closed");
+// 	$('#opening-contact').toggleClass("menu-opened");
+
+// }
+
+function closeOverlay(e) {
+
+	console.log("closing nav");
+	document.getElementById("myNav").style.height = "0%";
+	// document.getElementById("closing-x").style.width = "0";
+	$("body").css("overflow","auto");
 }
+
+function openOverlay(e) {
+
+	console.log("opening nav");
+	document.getElementById("myNav").style.height = "100%";
+	// document.getElementById("closing-x").style.width = "auto";
+	$("body").css("overflow","hidden");
+}
+
+
 
 function toggleInstructions() {
 	$('#instructions-text-container').delay(100).slideToggle();

@@ -35,9 +35,32 @@ $secondary-color: color("yellow", "base") !default;
   transform: rotate(0deg);
 }
 
+#hide-maintain-space {
+  visibility: hidden;
+}
 
 nav {
   background-color: transparent;
+}
+
+.socialmedia {
+	position: absolute;
+	top: 0px;
+    left: 0px;
+    margin: auto;
+    padding: 15px 15px 5px 15px;
+	height: 50px;
+	-webkit-transition: -webkit-transform .8s ease-in-out;
+	transition:  transform .8s ease-in-out;
+    // z-index: 2;
+}
+
+
+.socialmedia img {
+	cursor: hand;
+	cursor: pointer;
+	width: 33.34px;
+	padding: 2px;
 }
 
 
@@ -149,12 +172,21 @@ div#instructions-text-container, div#about-text-container, div#demo-text-contain
 }
 
 
-// #instructions-img:hover, #instructions-img:focus, #about-img:hover, #about-img:focus, #demo-img:hover, #demo-img:focus {
-//   -moz-transform: scale(1.2);
-//   -webkit-transform: scale(1.2);
-//   transform: scale(1.2);
-// }
+#instructions-img:hover, #instructions-img:focus, #about-img:hover, #about-img:focus, #demo-img:hover, #demo-img:focus {  
+  -webkit-transition: -webkit-transform .8s ease-in-out;
+  transition:  transform .8s ease-in-out;
+  -moz-transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
 
+.socialmedia img:focus, .socialmedia img:hover {
+  -webkit-transition: -webkit-transform .5s ease-in-out;
+  transition:  transform .5s ease-in-out;
+  -moz-transform: scale(1.2);
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2);
+}
 
 // img#title-massacre {
 //   // margin-left: 10vw;
@@ -223,36 +255,60 @@ div#instructions-text-container, div#about-text-container, div#demo-text-contain
 /* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
 @media screen and (max-height: 450px) {
     .overlay a {font-size: 20px}
-    .overlay .closebtn {
+    .overlay img#closing-x {
         font-size: 40px;
         top: 15px;
         right: 35px;
     }
 }
 
-img#opening-x {
+img#opening-contact {
 	cursor: hand;
 	cursor: pointer;
 	position: absolute;
+	top: 0px;
+    right: 0px;
     margin: auto;
     padding: 15px 15px 5px 15px;
 	height: 50px;
 	-webkit-transition: -webkit-transform .8s ease-in-out;
 	transition:  transform .8s ease-in-out;
 	position: fixed;
-    z-index: 2;
+    // z-index: 2;
 }
 
-// img#opening-x:hover, img#opening-x:focus {
-//   -moz-transform: scale(1.2);
-//   -webkit-transform: scale(1.2);
-//   transform: scale(1.2);
+
+// img#closing-x {
+// 	cursor: hand;
+// 	cursor: pointer;
+// 	position: absolute;
+// 	top: 0px;
+//     right: 0px;
+//     margin: auto;
+//     padding: 15px 15px 5px 15px;
+// 	height: 50px;
+// 	// width: 0;
+// 	-webkit-transition: -webkit-transform .8s ease-in-out;
+// 	transition:  transform .8s ease-in-out;
+// 	position: fixed;
+//     z-index: 2;
 // }
 
 
-#myNav {
-	-webkit-transition-delay: .3s; /* Safari */
-    transition-delay: .3s;
+img#closing-x {
+	position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+    height: 50px;
 }
+
+
+img#opening-contact:hover, img#opening-contact:focus {
+  -moz-transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
 
 
