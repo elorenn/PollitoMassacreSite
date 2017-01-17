@@ -164,7 +164,7 @@ div#frame-container {
 #text-section {
 	height: 90vh;
 	overflow: auto;
-	padding-top: 65px;
+	// padding-top: 65px;
 }
 
 #text-section img {
@@ -231,70 +231,107 @@ div#instructions-text-container, div#about-text-container, div#demo-text-contain
 
 // ****************************************************************** 
 
-.hero {
-	display: flex;
-   	justify-content: center;
+// => CSS5 Flexbox:
+// .hero {
+// 	display: flex;
+//    	justify-content: center;
+// }
+
+
+// => Extra small screens (less than 768px): 
+// @media screen and (max-width: 767px) {
+// 	#title-whole {
+// 		position: relative;
+// 		width: 80%;
+// 		position: absolute;
+// 	  	left: 80%;
+// 	  	top: 50%;
+// 	  	-webkit-transform: translate(-80%, -50%); // (x, y)
+// 	  	transform: translate(-80%, -50%);
+// 	 } 		
+
+// 	img#title-massacre {
+// 		margin: 10px;
+// 	}
+
+// 	img#title-pollito {
+// 	 	margin: 10px;
+// 	} 
+// }
+
+
+// => Small screens (768px - 992px):
+// @media screen and (min-width: 768px) {
+  
+// 	img#title-massacre {
+// 		display: block;
+// 		position: relative;
+// 		width: 70vw;
+// 		margin: auto;
+// 		margin-top: 20px;
+// 		margin-bottom: 20px;
+
+// 		left: 80%;
+// 	  	-webkit-transform: translate(-80%, 0%); // (x, y)
+// 	  	transform: translate(-80%, 0%);
+// 	}
+
+// 	img#title-pollito {
+// 		display: block;
+// 		position: relative;
+// 	 	width: 70vw;
+// 		margin: auto;
+// 		margin-top: 20px;
+// 		margin-bottom: 20px;
+
+// 		left: 80%;
+// 	  	-webkit-transform: translate(-80%, 0%); // (x, y)
+// 	  	transform: translate(-80%, 0%);
+// 	}
+
+// 	#title-whole {
+// 		position: absolute;
+// 		top: 50%;
+// 		-webkit-transform: translate(0%, -50%); // (x, y)
+// 	  	transform: translate(0%, -50%);
+// 	}  
+	
+// } // => SMALL SCREEN => min-width: 768px, max-width: 992px
+
+
+
+
+img#title-massacre {
+  margin: 10px;
+  // width: 37vw;
+  // margin-left: 10px; 
+  // margin-top: 150px;
+  // margin-bottom: 20vh;
 }
 
+img#title-pollito {
+  margin: 10px;
+  padding-left: 30px;
+  padding-right: 10px;
+  // width: 32vw;
+  // margin-right: 10px; 
+  // margin-top: 150px;
+  // margin-bottom: 20vh;
+}
 
+#title-whole {
+	position: relative;
+	width: 90vw;
+	// margin: auto;
+	margin-top: 150px;
+	margin-right: 10%;
+	margin-left: 10%;
+}
 
-@media screen and (min-width: 768px) {
-  
-	img#title-massacre {
-	  // margin: 10px;
-	  // width: 37vw;
-	  // margin-left: 10px; 
-	  // margin-top: 150px;
-	  // margin-bottom: 20vh;
-	}
+@media screen and (min-width: 992px) {
 
-	img#title-pollito {
-	  // margin: 10px;
-	  // width: 32vw;
-	  // margin-right: 10px; 
-	  // margin-top: 150px;
-	  // margin-bottom: 20vh;
-	}
+}
 
-	#title-whole {
-		// position: relative;
-		width: 50%;
-		// margin: auto;
-		// margin-top: 150px;
-		// margin-right: 10vw;
-		// margin-left: 10vw;
-	}  
-	
-
-} // => SMALL SCREEN => min-width: 768px
-
-
-
-
-// img#title-massacre {
-//   margin: 10px;
-//   // width: 37vw;
-//   // margin-left: 10px; 
-//   // margin-top: 150px;
-//   // margin-bottom: 20vh;
-// }
-
-// img#title-pollito {
-//   margin: 10px;
-//   // width: 32vw;
-//   // margin-right: 10px; 
-//   // margin-top: 150px;
-//   // margin-bottom: 20vh;
-// }
-
-// #title-whole {
-// 	position: relative;
-// 	width: 90vw;
-// 	// margin: auto;
-// 	margin-top: 150px;
-// 	margin-right: 10vw;
-// 	margin-left: 10vw;
-// }
 
 // ****************************************************************** 
 
