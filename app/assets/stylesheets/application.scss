@@ -52,6 +52,13 @@ footer.page-footer {
 }
 
 
+// @media only screen and (max-width: 500px) {	
+// 	footer {
+// 		height: 90vh;
+// 	}
+
+// }
+
 footer.page-footer .footer-copyright {
   background-color: rgba(0,0,0,.4);
 }
@@ -78,6 +85,45 @@ div#frame-container {
   margin-top:-39px; 
   margin-left:-2px;
 }
+
+#text-section {
+	height: 90vh;
+	overflow: auto;
+}
+
+#text-section img {
+	cursor: hand;
+	cursor: pointer;
+	padding-bottom: 10px;
+	padding-top: 10px;
+}
+
+div.instructions-container {
+	width: 40vw;
+	margin: auto;
+}
+
+div.about-container {
+	width: 14vw;
+	margin: auto;
+}
+
+div.demo-container {
+	width: 12vw;
+	margin: auto;
+}
+
+
+div#instructions-text-container, div#about-text-container, div#demo-text-container {
+	display: none;
+	width: 75vw;
+	margin: auto;
+	height: 50vh ;
+	background-color: #414FC9;
+	margin-bottom: 10px;
+	margin-top: 10px;	
+}
+
 
 
 
@@ -156,6 +202,8 @@ div#frame-container {
 }
 
 img#opening-x {
+	cursor: hand;
+	cursor: pointer;
 	position: absolute;
     margin: auto;
     padding: 15px 15px 5px 15px;

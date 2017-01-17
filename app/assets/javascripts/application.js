@@ -30,6 +30,9 @@ $(document).ready(function(){
 		$('#opening-x').toggleClass("rotateb");
 	});
 
+	$('#instructions-img').on("click", toggleInstructions);
+	$('#about-img').on("click", toggleAbout);
+	$('#demo-img').on("click", toggleDemo);
 
 }); //document-ready 
 
@@ -52,6 +55,22 @@ function toggleOverlay(e) {
 	$('#opening-x').toggleClass("menu-opened");
 
 }
+
+function toggleInstructions() {
+	$('#instructions-text-container').toggle();
+}
+
+function toggleAbout() {
+	$('#about-text-container').toggle();
+}
+
+function toggleDemo() {
+	$('#demo-text-container').toggle();
+}
+
+
+
+
 
 
 
