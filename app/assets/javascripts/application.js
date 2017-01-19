@@ -21,6 +21,8 @@ console.log("APP ONLINE");
 
 
 $(document).ready(function(){
+
+	$(window).on("scroll", changeNavbar);
     
 	$('.scrollspy').scrollSpy();
 
@@ -62,6 +64,15 @@ $(document).ready(function(){
 
 
 }); //document-ready 
+
+
+function changeNavbar() {
+  if($(window).scrollTop() > 60) {
+            $("nav").addClass("navscroll");
+        } else {
+           $("nav").removeClass("navscroll");
+        }
+}
 
 
 function closeOverlay(e) {
