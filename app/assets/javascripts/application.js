@@ -62,6 +62,12 @@ $(document).ready(function(){
 		$('#instructions-x').toggleClass("rotateb");
 	});
 
+	$("#caret").click(function() {
+    	$('html, body').animate({
+        	scrollTop: $("#videogame-section").offset().top-100
+    	}, 1000);
+	});
+
 
 }); //document-ready 
 
