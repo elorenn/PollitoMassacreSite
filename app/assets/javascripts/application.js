@@ -67,7 +67,7 @@ $(document).ready(function(){
 
 
 function changeNavbar() {
-  if($(window).scrollTop() > 60) {
+  if($(window).scrollTop() > 155) {
             $("nav").addClass("navscroll");
         } else {
            $("nav").removeClass("navscroll");

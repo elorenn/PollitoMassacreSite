@@ -62,7 +62,7 @@ nav {
 }
 
 .navscroll { 
-  background-color: #414FC9;
+  background-color: #5161fb;
 }
 
 // .socialmedia a {
@@ -77,8 +77,8 @@ nav {
     margin: auto;
     padding: 15px 15px 5px 15px;
 	// height: 20vw;
-	-webkit-transition: -webkit-transform .8s ease-in-out;
-	transition:  transform .8s ease-in-out;
+	-webkit-transition: -webkit-transform .5s ease-out;
+	transition:  transform .5s ease-out;
     z-index: 2;
 }
 
@@ -111,9 +111,9 @@ nav {
 
 
 #top-section {
-  height: 80vh;
-  padding: 0;
-  background-color: rgba(0,0,0,0);
+  position: relative;
+  height: 100vh;
+  padding-bottom: 10vh;
 }
 
 
@@ -142,14 +142,14 @@ footer.page-footer {
 
 footer.page-footer .footer-copyright {
   // background-color: rgba(0,0,0,.4);
-  background-color: rgb(31, 204, 39);
+  //background-color: rgb(31, 204, 39);
+  background-color: transparent;
   // filter: blur(20px);
 }
 
 
 div#videogame-section {
-  height: 70vh;
-  padding-top: 10vh;
+  height: 60vh;
 }
 
 
@@ -242,109 +242,116 @@ div#instructions-text-container, div#about-text-container, div#demo-text-contain
   transform: scale(1.2);
 }
 
+
 // ****************************************************************** 
 
 // => CSS5 Flexbox:
-// .hero {
-// 	display: flex;
-//    	justify-content: center;
-// }
-
-
-// => Extra small screens (less than 768px): 
-// @media screen and (max-width: 767px) {
-// 	#title-whole {
-// 		position: relative;
-// 		width: 80%;
-// 		position: absolute;
-// 	  	left: 80%;
-// 	  	top: 50%;
-// 	  	-webkit-transform: translate(-80%, -50%); // (x, y)
-// 	  	transform: translate(-80%, -50%);
-// 	 } 		
-
-// 	img#title-massacre {
-// 		margin: 10px;
-// 	}
-
-// 	img#title-pollito {
-// 	 	margin: 10px;
-// 	} 
-// }
-
-
-// => Small screens (768px - 992px):
-// @media screen and (min-width: 768px) {
-  
-// 	img#title-massacre {
-// 		display: block;
-// 		position: relative;
-// 		width: 70vw;
-// 		margin: auto;
-// 		margin-top: 20px;
-// 		margin-bottom: 20px;
-
-// 		left: 80%;
-// 	  	-webkit-transform: translate(-80%, 0%); // (x, y)
-// 	  	transform: translate(-80%, 0%);
-// 	}
-
-// 	img#title-pollito {
-// 		display: block;
-// 		position: relative;
-// 	 	width: 70vw;
-// 		margin: auto;
-// 		margin-top: 20px;
-// 		margin-bottom: 20px;
-
-// 		left: 80%;
-// 	  	-webkit-transform: translate(-80%, 0%); // (x, y)
-// 	  	transform: translate(-80%, 0%);
-// 	}
-
-// 	#title-whole {
-// 		position: absolute;
-// 		top: 50%;
-// 		-webkit-transform: translate(0%, -50%); // (x, y)
-// 	  	transform: translate(0%, -50%);
-// 	}  
-	
-// } // => SMALL SCREEN => min-width: 768px, max-width: 992px
-
-
-
+.hero {
+	position: relative;
+	display: flex;
+	display: -webkit-flex;
+   	justify-content: center;
+}
 
 img#title-massacre {
-  margin: 10px;
-  // width: 37vw;
-  // margin-left: 10px; 
-  // margin-top: 150px;
-  // margin-bottom: 20vh;
+  display:block;
+  margin: auto;
+  min-width: 64vw;
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-right: 10px; 
+  padding-bottom: 2vw;
 }
 
-img#title-pollito {
-  margin: 10px;
-  padding-left: 30px;
-  padding-right: 10px;
-  // width: 32vw;
-  // margin-right: 10px; 
-  // margin-top: 150px;
-  // margin-bottom: 20vh;
+img#title-pollito {	
+  display:block;
+  margin: auto;
+  min-width: 60vw;
+  padding-top: 10px;
+  padding-left: 40px;
+  padding-right: 30px;
+  padding-bottom: 2vw;
 }
+
 
 #title-whole {
-	position: relative;
-	width: 90vw;
-	// margin: auto;
-	margin-top: 150px;
-	margin-right: 10%;
-	margin-left: 10%;
+  padding-top: 20vh;
 }
 
-@media screen and (min-width: 992px) {
+// @media screen and (min-width: 992px) {
 
+// }
+
+
+div.caret-wrapper {
+	position: absolute; 
+    bottom: 0; 
+	width: 7vh;
 }
 
+img#caret {
+	margin-bottom: -15vh;
+}
+
+
+.blink-image {
+    -moz-animation: blink normal 2s infinite ease-in-out; // Firefox 
+    -webkit-animation: blink normal 2s infinite ease-in-out; // Webkit 
+    -ms-animation: blink normal 2s infinite ease-in-out; // IE 
+    animation: blink normal 2s infinite ease-in-out; // Opera and prob css3 final iteration 
+}
+
+
+// Firefox old
+@-moz-keyframes blink {
+    0% {
+        opacity:1;
+    }
+    50% {
+        opacity:0.3;
+    }
+    100% {
+        opacity:1;
+    }
+} 
+
+@-webkit-keyframes blink {
+    0% {
+        opacity:1;
+    }
+    50% {
+        opacity:0.3;
+    }
+    100% {
+        opacity:1;
+    }
+}
+
+// IE
+@-ms-keyframes blink {
+    0% {
+        opacity:1;
+    }
+    50% {
+        opacity:0.3;
+    }
+    100% {
+        opacity:1;
+    }
+} 
+
+// Opera and latest css3 
+@keyframes blink {
+    0% {
+        opacity:1;
+    }
+    50% {
+        opacity:0.3;
+    }
+    100% {
+        opacity:1;
+    }
+} 
 
 // ****************************************************************** 
 
