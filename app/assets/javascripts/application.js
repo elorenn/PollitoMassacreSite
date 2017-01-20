@@ -68,6 +68,8 @@ $(document).ready(function(){
     	}, 1000);
 	});
 
+	
+	reachedBottom();
 
 }); //document-ready 
 
@@ -155,6 +157,30 @@ function openDemoNav() {
 	} 
 
 }
+
+
+function isSectionInWindow(elem)
+{
+    var docViewTop = $(window).scrollTop();
+    var docViewBottom = docViewTop + $(window).height();
+    var elemTop = $(elem).offset().top;
+    var elemBottom = elemTop + $(elem).height();
+
+    return ((elemBottom >= docViewTop) && (elemTop <= docViewBottom) && (elemBottom <= docViewBottom) && (elemTop >= docViewTop));
+}
+
+
+
+function reachedBottom() {
+
+	$(window).scroll(function() {
+	   if($(window).scrollTop() + $(window).height() == $(document).height()) {
+	       console.log("you've reached the bottom");
+	   }
+	});
+    	
+}
+
 
 
 

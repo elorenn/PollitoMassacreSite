@@ -79,7 +79,7 @@ nav {
 	// height: 20vw;
 	-webkit-transition: -webkit-transform .5s ease-out;
 	transition:  transform .5s ease-out;
-    z-index: 2;
+    z-index: 4;
 }
 
 
@@ -113,7 +113,7 @@ nav {
 #top-section {
   position: relative;
   height: 100vh;
-  padding-bottom: 10vh;
+  padding-bottom: 10vw;
 }
 
 
@@ -127,6 +127,7 @@ body {
 footer.page-footer {
   margin: 0;
   padding-top: 20vh;
+  height: 60vh;
   background: url("landclear.png");
   background-repeat: no-repeat;
   background-size: cover;
@@ -140,12 +141,6 @@ footer.page-footer {
 
 // }
 
-footer.page-footer .footer-copyright {
-  // background-color: rgba(0,0,0,.4);
-  //background-color: rgb(31, 204, 39);
-  background-color: transparent;
-  // filter: blur(20px);
-}
 
 
 div#videogame-section {
@@ -291,6 +286,8 @@ div.caret-wrapper {
 
 img#caret {
 	margin-bottom: -15vh;
+	cursor: hand;
+	cursor: pointer;	
 }
 
 
@@ -361,7 +358,7 @@ img#caret {
     height: 0;
     width: 100%;
     position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
+    z-index: 3; /* Sit on top */
     left: 0;
     top: 0;
 
@@ -451,6 +448,22 @@ img#closing-x:hover, img#closing-x:focus {
   -webkit-transform: scale(1.2);
   transform: scale(1.2);
 }
+
+// ****************************************************************** 
+
+
+ 
+#red-car {
+	z-index: 2;
+	position: relative;
+ 	width: 20vw;
+ 	display:block;
+	margin: auto;
+	bottom: 200px;
+}
+
+
+
 
 
 
