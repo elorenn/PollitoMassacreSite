@@ -26,6 +26,24 @@ $secondary-color: color("yellow", "base") !default;
 
 // ****************************************************************** 
 // ****************************************************************** 
+@font-face {
+  font-family: "SFPixelate";
+  src: url(/assets/SFPixelate.ttf) format("truetype");
+}
+
+body {
+	font-family: "SFPixelate";
+	color: white;
+}
+
+p {
+	margin-right: 5px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	margin-left: 15px;
+	word-wrap: break-word;
+}
+
 // ****************************************************************** 
 
 
@@ -165,10 +183,9 @@ div#frame-container {
 }
 
 #text-section {
-	min-height: 70vh;
 	// height: 70vh;
+	min-height: 70vh;
 	overflow: auto;
-	// padding-top: 65px;
 }
 
 #text-section img {
@@ -196,11 +213,30 @@ div#instructions-text-container, div#about-text-container, div#demo-text-contain
 	display: none;
 	width: 75vw;
 	margin: auto;
-	height: 50vh ;
 	background-color: #414FC9;
 	margin-bottom: 10px;
 	margin-top: 10px;
+	// -webkit-transition: -webkit-transform 1s ease-in-out;
+	// transition:  transform 1s ease-in-out;
+	
+	min-height: 0;
+	overflow: auto;
 }
+
+
+#instructions-text-container img{
+	display: block;
+	float: right;
+	max-width: 15vw;
+	padding: 1vw;
+}
+
+#instructions-images {
+	width: 100%;
+	display: block; 
+	margin: auto;
+}
+
 
 #instructions-x, #about-x, #demo-x {
 	display: block;
@@ -220,6 +256,12 @@ div#instructions-text-container, div#about-text-container, div#demo-text-contain
 	padding-bottom: 3px;
 }
 
+#about-crying-img {
+	display: block;
+	float: right;
+	max-width: 15vw;
+	padding: 1vw;
+}
 
 #instructions-img:hover, #instructions-img:focus, #about-img:hover, #about-img:focus, #demo-img:hover, #demo-img:focus {  
   -webkit-transition: -webkit-transform .8s ease-in-out;
@@ -468,10 +510,6 @@ img#closing-x:hover, img#closing-x:focus {
 	//   transform: scale(3) translateY(150%);
 	// }
 }
-
-
-
-
 
 
 

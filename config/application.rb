@@ -1,3 +1,10 @@
+# Enable the asset pipeline
+config.assets.enabled = true
+config.assets.paths << Rails.root.join('/app/assets/fonts')
+
+config.assets.precompile << /\.(?:svg|eot|woff|ttf)\z/
+
+
 require_relative 'boot'
 
 require 'rails/all'

@@ -115,7 +115,7 @@ function toggleDemo() {
 
 function openInstructionsNav() {
 	
-	console.log('#instructions-text-container');
+	// console.log('#instructions-text-container');
 
 	if(!$('#instructions-text-container').is(':visible')) {
 		console.log("is hidden -weird");
@@ -134,7 +134,7 @@ function openInstructionsNav() {
 
 function openAboutNav() {
 	
-	console.log('#about-text-container');
+	// console.log('#about-text-container');
 
 	if(!$('#about-text-container').is(':visible')) {
 		console.log("is hidden -weird");
@@ -147,7 +147,7 @@ function openAboutNav() {
 
 function openDemoNav() {
 	
-	console.log('#demo-text-container');
+	// console.log('#demo-text-container');
 
 	if(!$('#demo-text-container').is(':visible')) {
 		console.log("is hidden -weird");
