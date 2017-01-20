@@ -176,11 +176,41 @@ function reachedBottom() {
 	$(window).scroll(function() {
 	   if($(window).scrollTop() + $(window).height() == $(document).height()) {
 	       console.log("you've reached the bottom");
+
+	       driveCar();
 	   }
 	});
     	
 }
 
+function driveCar() {
+
+	var inscreaseSize = 3;
+	var moveDownBy = 200;
+
+	
+	$('#red-car').delay( 800 ).css({
+		'-webkit-transform': 'scale(' + inscreaseSize + ')' + ' ' + 'translateY(' + moveDownBy + '%' + ')',
+        '-moz-transform': 'scale(' + inscreaseSize + ')' + ' ' + 'translateY(' + moveDownBy + '%' + ')',
+        '-ms-transform': 'scale(' + inscreaseSize + ')' + ' ' + 'translateY(' + moveDownBy + '%' + ')',
+        '-o-transform': 'scale(' + inscreaseSize + ')' + ' ' + 'translateY(' + moveDownBy + '%' + ')',
+        'transform': 'scale(' + inscreaseSize + ')' + ' ' + 'translateY(' + moveDownBy + '%' + ')',
+	});
+	
+}
+
+
+
+function hideCar() {
+	console.log("hiding car");
+	$('#red-car').hide();	
+}
+
+
+function driveCar2() {
+	$('#red-car').css({ scale: 3, y: '60px' });
+		
+}
 
 
 

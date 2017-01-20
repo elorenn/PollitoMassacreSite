@@ -456,11 +456,20 @@ img#closing-x:hover, img#closing-x:focus {
 #red-car {
 	z-index: 2;
 	position: relative;
- 	width: 20vw;
+ 	width: 10vw;
  	display:block;
+ 	// display:none;
 	margin: auto;
-	bottom: 200px;
+	// bottom: 200px;
+	bottom: 35vh;
+	transition: transform 2s;
+
+	// &:hover {
+	//   transform: scale(3) translateY(150%);
+	// }
 }
+
+
 
 
 
