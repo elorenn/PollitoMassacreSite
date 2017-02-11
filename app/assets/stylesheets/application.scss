@@ -437,6 +437,12 @@ img#caret {
     font-size: 50px;
 }
 
+// .overlay label:hover, .overlay label:focus {
+//     color: #f1f1f1;
+//     font-size: 50px;
+// }
+
+
 /* Position the close button (top right corner) */
 .overlay .closebtn {
     position: absolute;
@@ -503,7 +509,7 @@ img#closing-x:hover, img#closing-x:focus {
  	// display:none;
 	margin: auto;
 	// bottom: 200px;
-	bottom: 35vh;
+	bottom: 18 vh;
 	transition: transform 2s;
 
 	// &:hover {

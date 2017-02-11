@@ -5,6 +5,10 @@ group :development do
   gem 'rails_real_favicon'
 end
 
+gem "sprockets-es6", require: "sprockets/es6"
+
+gem 'pg', group: :production
+
 gem 'materialize-sass'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
@@ -39,6 +43,9 @@ gem 'jbuilder', '~> 2.5'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
+
+  # Use sqlite3 as the database for Active Record
+  gem 'sqlite3'
 end
 
 group :development do
